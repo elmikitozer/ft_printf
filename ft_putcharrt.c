@@ -6,9 +6,11 @@
 /*   By: myevou <myevou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 16:43:59 by myevou            #+#    #+#             */
-/*   Updated: 2023/11/10 16:45:05 by myevou           ###   ########.fr       */
+/*   Updated: 2023/11/15 16:42:49 by myevou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "ft_printf.h"
 
 int	ft_putcharrt(char c)
 {

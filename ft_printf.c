@@ -6,30 +6,32 @@
 /*   By: myevou <myevou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:21:06 by myevou            #+#    #+#             */
-/*   Updated: 2023/11/10 19:56:38 by myevou           ###   ########.fr       */
+/*   Updated: 2023/11/15 17:15:49 by myevou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft.h"
+// #include "libft.h"
 
 int	ft_printf(const char *str, ...)
 {
 	int		count;
 	va_list	args;
 
+	count = 0;
 	va_start(args, str);
 	while (str)
 	{
 		if (*str == '%')
 		{
-			str++;
-			arg_type(args, *str, &count);
+			arg_type(args, *(str + 1), &count);
 			str++;
 		}
-		write (1, str, 1);
+		else
+			count += write(1, str, 1);
 		str++;
 	}
+	va_end(args);
 	return (count);
 }
 
@@ -49,20 +51,17 @@ void	arg_type(va_list args, const char c, int *count)
 	else if (c == 'u')
 		count += ft_putstrrt(ft_itoa(va_arg(args, unsigned int)));
 	else if (c == 'x')
-		count += ft_putstrrt(ft_itoa(va_arg(args, int)));
+		count += ft_putvoidpt(va_arg(args, unsigned long long), 'x');
 	else if (c == 'X')
-		count += ft_putstrrt(ft_itoa(va_arg(args, int)));
+		count += ft_putvoidpt(va_arg(args, unsigned long long), 'X');
 	else if (c == '%')
 		count += ft_putcharrt('%');
 }
 
-// int	count_args(const char *str)
-// {
-// 	int	i;
+#include <unistd.h>
+#include<stdio.h>
 
-// 	i = 0;
-// 	while (str)
-// 	{
-// 		if *str == '%';
-// 	}
-// }
+int	main(void)
+{
+	printf("Je teste juste cette putain de fonction %ih que oui", 0);
+}

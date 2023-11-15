@@ -6,7 +6,7 @@
 /*   By: myevou <myevou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 19:14:53 by myevou            #+#    #+#             */
-/*   Updated: 2023/11/10 19:48:32 by myevou           ###   ########.fr       */
+/*   Updated: 2023/11/15 16:36:35 by myevou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 // 	return (1);
 // }
 
-int	count_void(unsigned long long address)
+static int	count_void(unsigned long long address)
 {
 	int	len;
 
