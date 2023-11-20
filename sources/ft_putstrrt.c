@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstrrt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: myevou <myevou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/10 16:21:03 by myevou            #+#    #+#             */
-/*   Updated: 2023/11/15 14:27:07 by myevou           ###   ########.fr       */
+/*   Created: 2023/11/10 16:45:20 by myevou            #+#    #+#             */
+/*   Updated: 2023/11/20 19:02:07 by myevou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
+int	ft_putstrrt(char *str)
+{
+	int	i;
 
-int	ft_putcharrt(char c);
-int	ft_putstrrt(char *str);
-int	ft_putnbrrt(int nbr);
-int	ft_putvoidpt(unsigned long long address, char format);
-
-#endif
+	i = 0;
+	if (!str)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	while (str[i])
+	{
+		write(1, &str[i], 1);
+		i++;
+	}
+	return (i);
+}

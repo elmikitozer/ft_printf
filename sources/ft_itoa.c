@@ -6,7 +6,7 @@
 /*   By: myevou <myevou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 17:11:11 by myevou            #+#    #+#             */
-/*   Updated: 2023/11/15 16:44:05 by myevou           ###   ########.fr       */
+/*   Updated: 2023/11/20 18:53:14 by myevou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,12 +100,13 @@ static void	convert_nb(char *outstr, long n_l, unsigned int nb_digit,
 		outstr[0] = '-';
 }
 
-char	*ft_itoa(int n)
+int	ft_itoa(int n)
 {
 	char			*outstr;
 	long			n_l;
 	unsigned int	nb_digit;
 	int				sign;
+	int				len;
 
 	sign = 1;
 	if (n < 0)
@@ -118,7 +119,9 @@ char	*ft_itoa(int n)
 	nb_digit = get_nb_digit(n_l, sign);
 	outstr = malloc(sizeof(char) * (nb_digit + 1));
 	if (!outstr)
-		return (NULL);
+		return (0);
 	convert_nb(outstr, n_l, nb_digit, sign);
-	return (outstr);
+	len = ft_putstrrt(outstr);
+	free(outstr);
+	return (len);
 }
