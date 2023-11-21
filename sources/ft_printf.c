@@ -6,7 +6,7 @@
 /*   By: myevou <myevou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:21:06 by myevou            #+#    #+#             */
-/*   Updated: 2023/11/21 11:24:09 by myevou           ###   ########.fr       */
+/*   Updated: 2023/11/21 12:06:12 by myevou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,6 @@ int	ft_printf(const char *str, ...)
 
 // int	main(void)
 // {
-// 	printf("valeur de retour: %i\n",(ft_printf("%x\n", 9223372036854775555)));
-// 	// printf("%d\n", printf("le vrai printf: %x\n", 9223372036854775));
+// 	printf("valeur de retour: %i\n", (ft_printf(" %s %s %s %s %s ", " - ", ""));
+// 	printf("printf: %d\n", printf(" %s %s %s %s %s ", "", "4", "", "2 "));
 // }
