@@ -6,12 +6,11 @@
 /*   By: myevou <myevou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:21:06 by myevou            #+#    #+#             */
-/*   Updated: 2023/11/20 19:54:20 by myevou           ###   ########.fr       */
+/*   Updated: 2023/11/21 11:24:09 by myevou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-// #include "libft.h"
 
 void	arg_type(va_list args, const char c, int *count)
 {

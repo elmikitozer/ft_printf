@@ -2,5 +2,8 @@
 *.o
 *.txt
 *.out
+*.pdf
 /libftcode
 /printfTester
+/ft_printf_tester
+printfMedic
